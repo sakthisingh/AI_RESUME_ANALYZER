@@ -40,6 +40,7 @@ resume_analyzer/
 ├── requirements.txt    # Required libraries
 ...
 
+...
 How It Works
 User uploads resume
 Text is extracted from PDF/DOCX
@@ -49,14 +50,14 @@ TF-IDF + Cosine Similarity calculate match score
 Suggestions are generated
 ...
 
-
+...
 MATCH SCORE MEANING 
 | Score   | Result         |
 | ------- | -------------- |
 | 0–39%   | Low match      |
 | 40–69%  | Moderate match |
 | 70–100% | Strong match   |
-
+...
 
 
 
