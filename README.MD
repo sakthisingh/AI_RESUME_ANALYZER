@@ -1,114 +1,99 @@
-AI Resume Analyzer
+# AI Resume Analyzer
 
 AI Resume Analyzer is a Python-based web application that analyzes a resume and compares it with a job description.
 
-It calculates a match score, detects technical skills, and gives suggestions to improve the resume.
+It calculates a match score, detects technical skills, and provides suggestions to improve the resume.
 
-📌 What This Project Does
+## What This Project Does
 
-Upload resume (PDF or DOCX)
+- Upload resume (`PDF` or `DOCX`)
+- Extract text from the file
+- Clean and preprocess text
+- Detect technical skills
+- Compare resume with job description
+- Calculate match percentage
+- Suggest improvements
 
-Extract text from the file
+## Technologies Used
 
-Clean and preprocess text
+- Python
+- NLTK (text preprocessing)
+- Scikit-learn (TF-IDF and cosine similarity)
+- pdfplumber (PDF extraction)
+- python-docx (DOCX extraction)
+- Streamlit (web interface)
 
-Detect technical skills
+## Project Structure
 
-Compare resume with job description
-
-Calculate match percentage
-
-Suggest improvements
-
-🛠 Technologies Used
-
-Python
-
-NLTK (Text preprocessing)
-
-Scikit-learn (TF-IDF & Cosine Similarity)
-
-pdfplumber (PDF extraction)
-
-python-docx (DOCX extraction)
-
-Streamlit (Web interface)
-
-📂 Project Structure
+```text
 resume_analyzer/
-│
-├── app.py              # Streamlit UI
-├── analyzer.py         # Skill extraction & scoring logic
-├── utils.py            # Text extraction & cleaning
-├── skills_db.py        # Skill database
-├── resumes/            # Temporary resume storage
-├── requirements.txt    # Required libraries
-🧠 How It Works
++-- app.py              # Streamlit UI
++-- analyzer.py         # Skill extraction and scoring logic
++-- utils.py            # Text extraction and cleaning
++-- skills_db.py        # Skill database
++-- resumes/            # Temporary resume storage
++-- requirements.txt    # Required libraries
+```
 
-User uploads resume
+## How It Works
 
-Text is extracted from PDF/DOCX
+1. User uploads a resume.
+2. Text is extracted from `PDF`/`DOCX`.
+3. Text is cleaned (stopwords, symbols, etc.).
+4. Skills are matched from the skill database.
+5. TF-IDF + cosine similarity calculate the match score.
+6. Suggestions are generated.
 
-Text is cleaned (remove stopwords, symbols, etc.)
+## Match Score Meaning
 
-Skills are matched from skill database
+| Score Range | Result |
+| --- | --- |
+| 0�39% | Low match |
+| 40�69% | Moderate match |
+| 70�100% | Strong match |
 
-TF-IDF + Cosine Similarity calculate match score
+## How to Run the Project
 
-Suggestions are generated
+### 1. Clone the repository
 
-📊 Match Score Meaning
-Score	Result
-0–39%	Low match
-40–69%	Moderate match
-70–100%	Strong match
-⚙️ How To Run The Project
-Step 1: Clone the repository
+```bash
 git clone https://github.com/yourusername/resume_analyzer.git
 cd resume_analyzer
-Step 2: Install dependencies
+```
+
+### 2. Install dependencies
+
+```bash
 pip install -r requirements.txt
-Step 3: Run the app
+```
+
+### 3. Run the app
+
+```bash
 streamlit run app.py
+```
 
 The application will open in your browser.
 
-💡 Example
+## Example
 
-If Job Description contains:
+If a job description contains `Python`, `Machine Learning`, and `TensorFlow`:
 
-Python, Machine Learning, TensorFlow
+- Resume with ML skills -> higher score
+- Resume with unrelated skills (for example, Flutter only) -> lower score
 
-Resume with ML skills → High score
+The system primarily checks keyword similarity.
 
-Resume with Flutter skills → Low score
+## Future Improvements
 
-Because the system checks keyword similarity.
+- Add experience detection
+- Add education extraction
+- Use BERT for better semantic matching
+- Add database integration
+- Deploy to cloud
 
-🚀 Future Improvements
+## Author
 
-Add experience detection
-
-Add education extraction
-
-Use BERT for better semantic matching
-
-Add database integration
-
-Deploy on cloud
-
-👨‍💻 Author
-
-Sakthi Singh
-Information Technology Student
-AI & Machine Learning Enthusiast
-
-This version is:
-
-✔ Simple
-✔ Clean
-✔ Easy to read
-✔ Suitable for GitHub
-✔ Good for recruiters
-
-If you want, I can now help you write a short 2–3 line project description for your GitHub repository title section.
+**Sakthi Singh**  
+Information Technology Student  
+AI and Machine Learning Enthusiast
