@@ -147,6 +147,3 @@ Contributions are welcome. Good starting areas:
 - Test coverage for scoring and suggestions
 - UI upgrades with analytics dashboards
 
-## License
-
-No license file is included yet. Add a `LICENSE` file (e.g., MIT) if you want public reuse rights to be clear.
